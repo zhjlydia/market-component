@@ -4,26 +4,32 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    intervalTime: { // 各列动画开始的间隔时间 最小值 300ms
+    /** 各列动画开始的间隔时间 最小值 300ms */
+    intervalTime: {
       type: Number,
       value: 300
     },
-    itemWidth: { // 元素宽度
+    /** 元素宽度 */
+    itemWidth: {
       type: Number,
       value: 200
     },
-    itemHeight: { // 元素高度
+    /** 元素高度 */
+    itemHeight: {
       type: Number,
       value: 200
     },
-    speed: { // 中间时刻动画速度，开始和结束时递减
+    /** 最大动画速度，开始和结束时递减 */
+    speed: {
       type: Number,
       value: 40
     },
-    turn: { // 第一列的圈数，每列递增2圈，需保证最后一列是最后停下来的
+    /** 第一列的圈数，每列递增2圈，需保证最后一列是最后停下来的 */
+    turn: {
       type: Number,
       value: 20
     },
+    /** 图片元素列表 字符串形式 string[] */
     items: {
       type:Array,
       value:[],
@@ -43,7 +49,7 @@ Component({
       value:[0,0,0],
       observer: function (newVal, oldVal, changedPath) {
         if (newVal) {
-          this.makeUiItems(newVal)
+          this.makeTransItems(newVal)
         }
       }
     },
@@ -64,7 +70,7 @@ Component({
   },
   lifetimes: {
     attached: function () {
-      this.makeUiItems(this.data.startPosition);
+      this.makeTransItems(this.data.startPosition);
     },
     detached: function () {
       // 在组件实例被从页面节点树移除时执行
@@ -74,7 +80,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    makeUiItems(position){
+    makeTransItems(position){
       let transY = position.map((item) => {
         return item * this.data.itemHeight
       })
@@ -122,7 +128,7 @@ Component({
             if (item.totalTransY >= totalHeight * item.currentTurn) {
               item.currentTurn++
             }
-            //马上快要停下
+            //马上快要停下时
             if (item.currentTurn >= totalTurn - 1){
               if (item.currentTransY >= item.endTransY) {
                 item.currentTransY = item.endTransY
