@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="index">
+  <view class="index-hd">
+    <view class="index-desc">小程序营销组件</view>
+  </view>
+  <view class="index-bd">
+    <view class="kind-list">
+      <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+        <view class="kind-list-item">
+          <view id="{{item.id}}" class="kind-list-item-hd" >
+            <navigator url="/pages/{{item.id}}/{{item.sub}}" class="navigator" hover-class="none">
+              <view class="kind-list-text">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

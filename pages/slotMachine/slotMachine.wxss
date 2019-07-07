@@ -1,0 +1,21 @@
+.machine-body{
+  position:absolute;
+    transform: translateX(-50%);
+    top:16px;
+    left:50%;
+    width:420rpx;
+}
+.machine-start{
+  position:absolute;
+  top:80px;
+  width:80px;
+  height:25px;
+  line-height:25px;
+  transform: translateX(-50%);
+  left:50%;
+  font-size:30rpx;
+  }
+  .slot-machine-example{
+    background:#000;
+    height:200rpx;
+  }

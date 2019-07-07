@@ -1,0 +1,28 @@
+page{
+  background: #FBF9FE
+}
+.navigator {
+  position: relative;
+  display: block;
+  align-items: center;
+  width: 100%;
+}
+.index-hd {
+  padding: 80rpx;
+  text-align: center;
+}
+.index-desc {
+  margin-top: 20rpx;
+  color: #888888;
+  font-size: 28rpx;
+}
+
+.kind-list-item {
+  margin: 20rpx 0;
+  background-color: #FFFFFF;
+  border-radius: 4rpx;
+  overflow: hidden;
+}
+.kind-list-text{
+  flex: 1;
+}

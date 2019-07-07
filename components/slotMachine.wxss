@@ -1,0 +1,21 @@
+
+.machine-content {
+  display:flex;
+  justify-content:space-between;
+}
+ 
+.machine-content .machine-item {
+  position: relative;
+}
+.machine-item-wrap{
+  border-radius:10rpx;
+  overflow: hidden;
+}
+.machine_item_ele{
+  height:100%;
+}
+.machine_item_img{
+  width:100%;
+  height:100%;
+}
+ 

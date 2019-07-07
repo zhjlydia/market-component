@@ -1,0 +1,7 @@
+
+<view class="slot-machine-example">
+ <slot-machine items="{{items}}" id='slot-machine' class="machine-body" itemHeight="130" itemWidth="130" startPosition="{{startPosition}}"></slot-machine>
+ <button class="machine-start" bind:tap='start'>start</button>
+</view>
+
+
