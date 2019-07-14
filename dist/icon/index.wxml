@@ -1,0 +1,12 @@
+<wxs src="../wxs/utils.wxs" module="utils" />
+
+<view
+  class="custom-class {{ prefixCls }} {{ utils.isSrc(name) ? prefixCls+'-image': prefixCls + '-' + name }}"
+  style="{{ color ? 'color: ' + color + ';' : '' }}{{ size ? 'font-size: ' + size + ';' : '' }}{{ customStyle }}"
+  bind:tap="onClick"
+>
+  <image
+    wx:if="{{ utils.isSrc(name) }}"
+    src="{{ name }}"
+  />
+</view>

@@ -1,0 +1,10 @@
+import { SpuiComponent } from '../common/component';
+SpuiComponent({
+  props: {
+    border: {
+      type: Boolean,
+      value: true
+    }
+  }
+});
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNlbGwtZ3JvdXAvaW5kZXgudHMiXSwibmFtZXMiOlsiU3B1aUNvbXBvbmVudCIsInByb3BzIiwiYm9yZGVyIiwidHlwZSIsIkJvb2xlYW4iLCJ2YWx1ZSJdLCJtYXBwaW5ncyI6IkFBQUEsU0FBU0EsYUFBVCxRQUE4QixxQkFBOUI7QUFFQUEsYUFBYSxDQUFDO0FBQ1pDLEVBQUFBLEtBQUssRUFBRTtBQUNMQyxJQUFBQSxNQUFNLEVBQUU7QUFDTkMsTUFBQUEsSUFBSSxFQUFFQyxPQURBO0FBRU5DLE1BQUFBLEtBQUssRUFBRTtBQUZEO0FBREg7QUFESyxDQUFELENBQWIiLCJmaWxlIjoiY2VsbC1ncm91cC9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFNwdWlDb21wb25lbnQgfSBmcm9tICcuLi9jb21tb24vY29tcG9uZW50JztcclxuXHJcblNwdWlDb21wb25lbnQoe1xyXG4gIHByb3BzOiB7XHJcbiAgICBib3JkZXI6IHtcclxuICAgICAgdHlwZTogQm9vbGVhbixcclxuICAgICAgdmFsdWU6IHRydWVcclxuICAgIH1cclxuICB9XHJcbn0pO1xyXG4iXX0=

@@ -1,0 +1,38 @@
+<view class="custom-class spui-tabs spui-tabs--{{ type }}">
+  <view style="z-index: {{ zIndex }}; {{ wrapStyle }}" class="spui-tabs__wrap {{ scrollable ? 'spui-tabs__wrap--scrollable' : '' }} {{ type === 'line' && border ? 'spui-border--top-bottom' : '' }}">
+    <scroll-view
+      scroll-x="{{ scrollable }}"
+      scroll-with-animation
+      scroll-left="{{ scrollLeft }}"
+      class="spui-tabs__scroll--{{ type }}"
+      style="{{ color ? 'border-color: ' + color : '' }}"
+    >
+      <view class="spui-tabs__nav spui-tabs__nav--{{ type }}">
+        <view wx:if="{{ type === 'line' }}" class="spui-tabs__line" style="{{ lineStyle }}" />
+        <view
+          wx:for="{{ tabs }}"
+          wx:key="index"
+          data-index="{{ index }}"
+          class="spui-ellipsis spui-tab {{ index === active ? 'spui-tab--active' : '' }} {{ item.disabled ? 'spui-tab--disabled' : '' }}"
+          style="{{ color && index !== active && type === 'card' && !item.disabled ? 'color: ' + color : '' }} {{ color && index === active && type === 'card' ? ';background-color:' + color : '' }} {{ color ? ';border-color: ' + color : '' }} {{ scrollable ? ';flex-basis:' + (88 / swipeThreshold) + '%' : '' }}"
+          bind:tap="onTap"
+        >
+          <view class="spui-ellipsis spui-tab__title">
+            {{ item.title }}
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view
+    class="spui-tabs__content"
+    bind:touchstart="onTouchStart"
+    bind:touchmove="onTouchMove"
+    bind:touchend="onTouchEnd"
+    bind:touchcancel="onTouchEnd"
+  >
+    <view class="spui-tabs__track" style="{{ trackStyle }}">
+      <slot />
+    </view>
+  </view>
+</view>

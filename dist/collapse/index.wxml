@@ -1,0 +1,3 @@
+<view class="spui-collapse spui-border--top-bottom custom-class">
+  <slot />
+</view>

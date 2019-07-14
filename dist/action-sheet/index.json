@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "spui-icon": "../icon/index",
+    "spui-popup": "../popup/index",
+    "spui-loading": "../loading/index"
+  }
+}

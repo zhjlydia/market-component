@@ -37,7 +37,30 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "3",
+					"pathName": "pages/logs/logs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "老虎机",
+					"pathName": "pages/slotMachine/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "水果机",
+					"pathName": "pages/fruitMachine/index",
+					"query": "",
+					"scene": null
+				}
+			]
 		}
 	}
 }

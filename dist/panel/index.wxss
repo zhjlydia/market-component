@@ -1,0 +1,1 @@
+@import '../common/style/index.wxss';.spui-panel{background:#fff}.spui-panel__header-value{color:#f44}.spui-panel__footer{padding:10px 15px}

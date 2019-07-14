@@ -1,0 +1,17 @@
+.machine-body{
+  margin:50rpx auto;
+  display:block;
+  width:420rpx;
+  height:420rpx;
+}
+.machine-start{
+  width:80px;
+  height:25px;
+  line-height:25px;
+  font-size:30rpx;
+  margin:0 auto;
+  }
+  .slot-machine-example{
+    background:#000;
+    height:800rpx;
+  }

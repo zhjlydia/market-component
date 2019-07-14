@@ -1,0 +1,8 @@
+<!--components/slotM.wxml-->
+<view class='machine-content fill100'>
+  <view class="machine-item-wrap btn" wx:if="{{items.length===8}}"></view>
+  <view wx:for="{{items}}" wx:key="index" class="machine-item-wrap {{index === order[currentIndex] ?'highlight':''}}">
+    <image class="machine_item_img" src="{{item.url}}"></image>
+    <view class="award-text">{{item.text}}</view>
+  </view>
+</view>

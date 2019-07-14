@@ -1,19 +1,19 @@
-<!--index.wxml-->
-<view class="index">
-  <view class="index-hd">
-    <view class="index-desc">小程序营销组件</view>
-  </view>
-  <view class="index-bd">
-    <view class="kind-list">
-      <block wx:for-items="{{list}}" wx:key="{{item.id}}">
-        <view class="kind-list-item">
-          <view id="{{item.id}}" class="kind-list-item-hd" >
-            <navigator url="/pages/{{item.id}}/{{item.sub}}" class="navigator" hover-class="none">
-              <view class="kind-list-text">{{item.name}}</view>
-            </navigator>
-          </view>
-        </view>
-      </block>
+<view class="container">
+  <view class="title"> <view class="title-text">Spui Weapp</view> </view>
+  <view class="desc">小程序 UI 组件库</view>
+
+  <block wx:for="{{ list }}" wx:for-item="group" wx:key="group.title">
+    <view class="mobile-nav">
+      <view class="mobile-nav__title">{{ group.groupName }}</view>
+      <spui-cell-group>
+        <spui-cell
+          wx:for="{{ group.list }}"
+          wx:key="item.title"
+          is-link
+          url="/pages{{ item.path }}/index"
+          title="{{ item.title }}"
+        ></spui-cell>
+      </spui-cell-group>
     </view>
-  </view>
+  </block>
 </view>

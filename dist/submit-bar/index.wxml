@@ -1,0 +1,33 @@
+<wxs src="../wxs/utils.wxs" module="utils" />
+
+<view class="spui-submit-bar custom-class">
+  <slot name="top" />
+
+  <view wx:if="{{ tip }}" class="spui-submit-bar__tip">
+    {{ tipStr }}<slot name="tip" />
+  </view>
+
+  <view class="bar-class {{ utils.bem('submit-bar__bar', { safe: safeAreaInsetBottom && isIPhoneX }) }}">
+    <slot />
+    <view class="spui-submit-bar__text">
+      <block wx:if="{{ hasPrice }}">
+        <text>{{ label || '合计：' }}</text>
+        <text class="spui-submit-bar__price price-class">
+          <text class="spui-submit-bar__currency">{{ currency }}</text> {{ priceStr }}
+        </text>
+      </block>
+    </view>
+    <spui-button
+      square
+      size="large"
+      type="{{ buttonType }}"
+      loading="{{ loading }}"
+      disabled="{{ disabled }}"
+      class="spui-submit-bar__button"
+      custom-class="button-class"
+      bind:click="onSubmit"
+    >
+      {{ loading ? '' : buttonText }}
+    </spui-button>
+  </view>
+</view>

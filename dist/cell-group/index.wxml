@@ -1,0 +1,3 @@
+<view class="custom-class spui-cell-group {{ border ? 'spui-border--top-bottom' : '' }}">
+  <slot />
+</view>

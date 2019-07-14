@@ -1,0 +1,1 @@
+@import '../common/style/index.wxss';.spui-goods-action{position:fixed;right:0;bottom:0;left:0;display:-webkit-box;display:flex;background-color:#fff}.spui-goods-action--safe{padding-bottom:34px}

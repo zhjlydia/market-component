@@ -1,11 +1,17 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/index/index",
+    "pages/slotMachine/index",
+    "pages/fruitMachine/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
+  },
+  "usingComponents": {
+    "spui-cell": "../dist/cell/index",
+    "spui-cell-group": "../dist/cell-group/index"
   }
 }

@@ -1,0 +1,10 @@
+<view class="spui-badge spui-border custom-class {{ active ? 'spui-badge--active' : '' }}" bind:tap="onClick">
+  <view class="spui-badge__text">
+    <spui-info
+      wx:if="{{ info !== null }}"
+      info="{{ info }}"
+      custom-style="right: 4px"
+    />
+    {{ title }}
+  </view>
+</view>

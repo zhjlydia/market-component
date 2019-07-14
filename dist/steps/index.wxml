@@ -1,0 +1,20 @@
+<view class="custom-class spui-steps spui-steps--{{ direction }}">
+  <view class="spui-step__wrapper">
+    <view
+      wx:for="{{ steps }}"
+      wx:key="index"
+      class="spui-step spui-border spui-step--{{ direction }} {{ item.status ? 'spui-step--' + item.status : '' }}"
+      style="{{ width ? 'width:' + width + 'px' : '' }}"
+    >
+      <view class="spui-step__title" style="{{ item.status === 'process' ? 'color: ' + activeColor : '' }}">
+        <view>{{ item.text }}</view>
+        <view>{{ item.desc }}</view>
+      </view>
+      <view class="spui-step__circle-container">
+        <view class="spui-step__circle" wx:if="{{ item.status !== 'process' }}" style="{{ item.status === 'finish' ? 'background-color: ' + activeColor : '' }}" />
+        <spui-icon wx:else name="checked" color="{{ activeColor }}" custom-class="spui-step__active" />
+      </view>
+      <view wx:if="{{ index !== steps.length - 1 }}" class="spui-step__line" style="{{ item.status === 'finish' ? 'background-color: ' + activeColor : '' }}" />
+    </view>
+  </view>
+</view>

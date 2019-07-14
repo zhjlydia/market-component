@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "spui-icon": "../icon/index"
+  }
+}

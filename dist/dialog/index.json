@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "spui-popup": "../popup/index",
+    "spui-button": "../button/index"
+  }
+}

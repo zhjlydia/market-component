@@ -1,0 +1,1 @@
+@import '../common/style/index.wxss';.spui-rate{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.spui-rate__item{width:1em;padding:0 2px;box-sizing:content-box}

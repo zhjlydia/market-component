@@ -1,0 +1,31 @@
+<view
+  wx:if="{{ show }}"
+  class="custom-class spui-notice-bar {{ hasRightIcon ? 'spui-notice-bar--within-icon' : '' }}"
+  style="color: {{ color }};background-color: {{ backgroundColor }}"
+  bind:tap="onClick"
+>
+  <view wx:if="{{ leftIcon }}" class="spui-notice-bar__left-icon">
+    <image src="{{ leftIcon }}" />
+  </view>
+  <view class="spui-notice-bar__content-wrap">
+    <view class="spui-notice-bar__content {{ scrollable ? '' : 'spui-ellipsis' }}" animation="{{ animationData }}">
+      {{ text }}
+    </view>
+  </view>
+
+  <block wx:if="{{ mode }}">
+    <spui-icon
+      wx:if="{{ mode === 'closeable' }}"
+      class="spui-notice-bar__right-icon"
+      name="cross"
+      bind:tap="onClickIcon"
+    />
+    <navigator
+      wx:if="{{ mode === 'link' }}"
+      url="{{ url }}"
+      open-type="{{ openType }}"
+    >
+      <spui-icon class="spui-notice-bar__right-icon" name="arrow" />
+    </navigator>
+  </block>
+</view>

@@ -1,0 +1,21 @@
+<view class="spui-stepper custom-class">
+  <view
+    class="minus-class spui-stepper__minus {{ minusDisabled ? 'spui-stepper__minus--disabled' : '' }}"
+    bind:tap="onMinus"
+  />
+  <view class="input-class spui-stepper__input-wrapper {{ disabled || disableInput ? 'spui-stepper__input-wrapper--disabled' : '' }}" bindtap="onFocus">
+    <input
+      type="{{ integer ? 'number' : 'digit' }}"
+      class="spui-stepper__input"
+      value="{{ value }}"
+      focus="{{ focus }}"
+      disabled="{{ disabled || disableInput }}"
+      bindinput="onInput"
+      bind:blur="onBlur"
+    />
+  </view>
+  <view
+    class="plus-class spui-stepper__plus {{ plusDisabled ? 'spui-stepper__plus--disabled' : '' }}"
+    bind:tap="onPlus"
+  />
+</view>

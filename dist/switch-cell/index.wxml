@@ -1,0 +1,17 @@
+<spui-cell
+  center
+  title="{{ title }}"
+  border="{{ border }}"
+  custom-class="spui-switch-cell"
+>
+  <spui-switch
+    size="{{ size }}"
+    checked="{{ checked }}"
+    loading="{{ loading }}"
+    disabled="{{ disabled }}"
+    active-color="{{ activeColor }}"
+    inactive-color="{{ inactiveColor }}"
+    custom-class="spui-switch-cell__switch"
+    bind:change="onChange"
+  />
+</spui-cell>

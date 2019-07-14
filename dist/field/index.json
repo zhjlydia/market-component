@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "spui-cell": "../cell/index",
+    "spui-icon": "../icon/index"
+  }
+}

@@ -1,0 +1,42 @@
+<wxs src="../wxs/utils.wxs" module="utils" />
+
+<view class="spui-collapse-item spui-border--top custom-class">
+  <spui-cell
+    title="{{ title }}"
+    icon="{{ icon }}"
+    is-link="{{ isLink }}"
+    value="{{ value }}"
+    label="{{ label }}"
+    border="{{ border && expanded }}"
+    class="{{ utils.bem('collapse-item__title', { disabled, expanded }) }}"
+    right-icon-class="spui-cell__right-icon"
+    custom-class="spui-cell"
+    bind:click="onClick"
+  >
+    <slot
+      name="title"
+      slot="title"
+    />
+    <slot
+      name="icon"
+      slot="icon"
+    />
+    <slot name="value" />
+    <slot
+      name="right-icon"
+      slot="right-icon"
+    />
+  </spui-cell>
+  <view
+    class="spui-collapse-item__wrapper"
+    style="height: {{ contentHeight }};"
+    animation="{{ animationData }}"
+    bind:transitionend="onTransitionEnd"
+  >
+    <view
+      class="spui-collapse-item__content content-class"
+    >
+      <slot />
+    </view>
+  </view>
+</view>

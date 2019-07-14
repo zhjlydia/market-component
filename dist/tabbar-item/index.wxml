@@ -1,0 +1,28 @@
+<view
+  class="spui-tabbar-item {{ active ? 'spui-tabbar-item--active' : '' }}"
+  style="{{ active && color ? 'color: ' + color : '' }}"
+  bind:tap="onClick"
+>
+  <view class="spui-tabbar-item__icon {{ dot ? 'spui-tabbar-item__icon--dot' : '' }}">
+    <spui-icon
+      wx:if="{{ icon }}"
+      name="{{ icon }}"
+      customStyle="display: block"
+    />
+    <block wx:else>
+      <slot
+        wx:if="{{ active }}"
+        name="icon-active"
+      />
+      <slot wx:else name="icon" />
+    </block>
+    <spui-info
+      wx:if="{{ info !== null }}"
+      info="{{ info }}"
+      custom-style="margin-top: 2px"
+    />
+  </view>
+  <view class="spui-tabbar-item__text">
+    <slot />
+  </view>
+</view>

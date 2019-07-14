@@ -1,11 +1,21 @@
+
+
 Page({
-    data: {
+  data: {
+    list: [
+      {
+        groupName: '营销组件',
         list: [
-            {
-                id: 'slotMachine',
-                sub: 'slotMachine',
-                name: '老虎机'
-            }
+          {
+            path: '/slotMachine',
+            title: 'SlotMachine 老虎机'
+          },
+          {
+            path: '/fruitMachine',
+            title: 'FruitMachine 水果机'
+          }
         ]
-    }
-})
+      }
+    ]
+  }
+});

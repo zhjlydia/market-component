@@ -1,0 +1,1 @@
+@import '../common/style/index.wxss';.spui-tab__pane{box-sizing:border-box;overflow-y:auto}.spui-tab__pane--active{height:auto}.spui-tab__pane--inactive{height:0;overflow:visible}

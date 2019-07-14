@@ -1,0 +1,8 @@
+<spui-transition
+  name="slide-down"
+  show="{{ show }}"
+  custom-class="spui-notify"
+  custom-style="background-color:{{ backgroundColor }}; color: {{ color }}"
+>
+  {{ text }}
+</spui-transition>

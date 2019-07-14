@@ -1,0 +1,32 @@
+<spui-button
+  square
+  id="{{ id }}"
+  size="large"
+  lang="{{ lang }}"
+  loading="{{ loading }}"
+  disabled="{{ disabled }}"
+  open-type="{{ openType }}"
+  custom-class="spui-goods-action-icon"
+  session-from="{{ sessionFrom }}"
+  app-parameter="{{ appParameter }}"
+  send-message-img="{{ sendMessageImg }}"
+  send-message-path="{{ sendMessagePath }}"
+  show-message-card="{{ showMessageCard }}"
+  send-message-title="{{ sendMessageTitle }}"
+  bind:click="onClick"
+  binderror="bindError"
+  bindcontact="bindContact"
+  bindopensetting="bindOpenSetting"
+  bindgetuserinfo="bindGetUserInfo"
+  bindgetphonenumber="bindGetPhoneNumber"
+>
+  <view class="spui-goods-action-icon__content spui-border--right">
+    <spui-icon
+      size="20px"
+      name="{{ icon }}"
+      info="{{ info }}"
+      class="spui-goods-action-icon__icon"
+    />
+    {{ text }}
+  </view>
+</spui-button>

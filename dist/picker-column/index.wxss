@@ -1,0 +1,1 @@
+@import '../common/style/index.wxss';.spui-picker-column{overflow:hidden;font-size:16px;text-align:center}.spui-picker-column__item{padding:0 5px;color:#999}.spui-picker-column__item--selected{font-weight:500;color:#30404f}.spui-picker-column__item--disabled{opacity:.3}

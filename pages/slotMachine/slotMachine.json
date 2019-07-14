@@ -1,5 +1,0 @@
-{
-  "usingComponents": {
-    "slot-machine": "../../components/slotMachine"
-  }
-}

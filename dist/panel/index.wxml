@@ -1,0 +1,19 @@
+<view class="spui-panel spui-border--top-bottom custom-class">
+  <spui-cell 
+    wx:if="{{ title || desc || status }}"
+    title="{{ title }}"
+    label="{{ desc }}"
+    value="{{ status }}"
+    custom-class="header-class"
+    value-class="spui-panel__header-value"
+  />
+  <slot wx:else name="header" />
+
+  <view class="spui-panel__content">
+    <slot />
+  </view>
+
+  <view wx:if="{{ useFooterSlot }}" class="spui-panel__footer spui-border--top footer-class">
+    <slot name="footer" />
+  </view>
+</view>

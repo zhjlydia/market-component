@@ -1,0 +1,25 @@
+<view
+  class="custom-class spui-nav-bar {{ border ? 'spui-border--bottom' : '' }} {{ fixed ? 'spui-nav-bar--fixed' : '' }}"
+  style="z-index: {{ zIndex }}"
+>
+  <view class="spui-nav-bar__left" bind:tap="onClickLeft">
+    <block wx:if="{{ leftArrow || leftText }}">
+      <spui-icon
+        wx:if="{{ leftArrow }}"
+        size="16px"
+        name="arrow-left"
+        custom-class="spui-nav-bar__arrow"
+      />
+      <view wx:if="{{ leftText }}" class="spui-nav-bar__text">{{ leftText }}</view>
+    </block>
+    <slot wx:else name="left" />
+  </view>
+  <view class="spui-nav-bar__title title-class spui-ellipsis">
+    <block wx:if="{{ title }}">{{ title }}</block>
+    <slot wx:else name="title" />
+  </view>
+  <view class="spui-nav-bar__right" bind:tap="onClickRight">
+    <view wx:if="{{ rightText }}" class="spui-nav-bar__text">{{ rightText }}</view>
+    <slot wx:else name="right" />
+  </view>
+</view>

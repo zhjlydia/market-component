@@ -1,0 +1,27 @@
+<view
+  class="custom-class spui-slider {{ disabled ? 'spui-slider--disabled' : '' }}"
+  style="{{ inactiveColor ? 'background:' + inactiveColor : '' }}"
+  bind:tap="onClick"
+>
+  <view
+    class="spui-slider__bar"
+    style="{{ barStyle }}; {{ activeColor ? 'background:' + activeColor : '' }}"
+  >
+    <view
+      class="spui-slider__button-wrapper"
+      bind:touchstart="onTouchStart"
+      catch:touchmove="onTouchMove"
+      bind:touchend="onTouchEnd"
+      bind:touchcancel="onTouchEnd"
+    >
+      <slot
+        wx:if="{{ useButtonSlot }}"
+        name="button"
+      />
+      <view
+        wx:else
+        class="spui-slider__button"
+      />
+    </view>
+  </view>
+</view>
